@@ -61,4 +61,8 @@ public class Ticket {
                 ", price=" + price +
                 '}';
     }
+
+    public String getId() {
+        return id;
+    }
 }
