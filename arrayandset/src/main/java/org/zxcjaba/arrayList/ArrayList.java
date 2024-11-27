@@ -11,20 +11,23 @@ public class ArrayList<T> implements Iterable<T> {
     private int size;
     private int lastIndex;
     private int current;
+    int modifier;
+    int startSize = 10;
 
     public ArrayList() {
-        size = 10;
+        size = startSize;
         lastIndex=0;
         objects = (T[]) new Object[size];
         current=0;
+        modifier=2''
     }
 
     public void add(T object) {
         if(lastIndex==size){
-            T[] newArray = (T[]) new Object[size*2];
+            T[] newArray = (T[]) new Object[size*modifier];
             System.arraycopy(objects,0,newArray,0,size);
             objects=newArray;
-            size=size*2;
+            size=size*modifier;
 
         }
             objects[lastIndex]=object;

@@ -42,7 +42,7 @@ public class HashSet<T> implements Iterable<T> {
     }
 
     public boolean contains(T element) {
-        int index=(size-1)&element.hashCode()%size;
+        int index=element.hashCode()%size;
         if(elements[index]!=null) {
             return elements[index].equals(element);
         }
