@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/gambling</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">19031988</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <mapping class="org.zxcjaba.persistence.entity.User"/>
+        <mapping class="org.zxcjaba.persistence.entity.Ticket"/>
+    </session-factory>
+</hibernate-configuration>
